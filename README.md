@@ -1,3 +1,6 @@
 # article-data-driven-examples
-Reproducible code for “A Data-Driven Trading Strategy for Wind–Solar–Battery Microgrids in the Spot Electricity Market” (GMM/K-means, LSTM, MILP).
-This repository contains all data preprocessing scripts, forecasting models, and optimization routines used in the paper “A Data-Driven Trading Strategy for Wind–Solar–Battery Microgrids in the Spot Electricity Market,” enabling full replication of the numerical experiments.
+This repository contains the full code base for the paper “A Data-Driven Trading Strategy for Wind–Solar–Battery Microgrids in the Spot Electricity Market.” It implements a unified data-driven pipeline that (i) generates seasonal scenarios for PV and wind output via Gaussian Mixture Models (GMM) and K-means clustering, (ii) trains and evaluates LSTM models for day-ahead electricity price forecasting, and (iii) embeds these data-driven components into a mixed-integer linear programming (MILP) model to co-optimize the sizing and trading strategy of a wind–solar–battery microgrid in the electricity spot and auxiliary service markets.
+
+The repository includes scripts for scenario generation for wind and PV, price-forecast model training, and optimization routines for reproducing all numerical experiments and figures reported in the paper. By following the provided code and configuration files, readers can fully replicate the main results, sensitivity analyses, and robustness checks presented in the study.
+
+Users can start from the scenario-generation scripts for wind and PV, then run the LSTM price forecasting module, and finally solve the MILP trading model to obtain the optimal microgrid capacity mix and bidding schedules under different prediction-error and imbalance-price settings.
